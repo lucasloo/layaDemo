@@ -3,7 +3,7 @@
  */
 export default class Bullet extends Laya.Script {
     constructor() { super(); }
-
+    
     onEnable(): void {
         //设置初始速度
         var rig: Laya.RigidBody = this.owner.getComponent(Laya.RigidBody);
