@@ -1,2 +1,10 @@
 /.rpt2_cache
-bin/*
+bin/js
+bin/prefab
+bin/res
+bin/sound
+bin/test
+bin/fileconfig.json
+bin/texture.png
+bin/unpack.json
+
