@@ -11,7 +11,7 @@ export default class GameControl extends Laya.Script {
     /** @prop {name:plane,tips:"飞机",type:Prefab}*/
     plane: Laya.Prefab;
     /** @prop {name:createBoxInterval,tips:"间隔多少毫秒创建一个下跌的容器",type:int,default:1000}*/
-    createBoxInterval: number = 1000;
+    createBoxInterval: number = 2000;
     planeObj: Laya.Sprite;
     /**开始时间*/
     private _time: number = 0;

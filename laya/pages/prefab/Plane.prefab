@@ -4,7 +4,7 @@
     "selectedBox":1,
     "selecteID":4,
     "searchKey":"Sprite,plane",
-    "props":{"texture":"test/c1.png","presetID":1,"preset":"laya/pages/prefab/Plane.prefab","pivotY":50,"pivotX":50,"name":"plane","isPresetRoot":true,"group":1,"gravityScale":0.5},
+    "props":{"texture":"test/c1.png","presetID":1,"preset":"laya/pages/prefab/Plane.prefab","pivotY":50,"pivotX":50,"name":"plane","isPresetRoot":true,"group":1,"gravityScale":0},
     "nodeParent":-1,
     "maxID":12,
     "label":"plane",
