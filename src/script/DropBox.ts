@@ -1,4 +1,5 @@
 import GameUI from "./GameUI";
+import MotionConfig from "../res/MotionConfig"
 /**
  * 掉落盒子脚本，实现盒子碰撞及回收流程
  */
@@ -37,8 +38,7 @@ export default class DropBox extends Laya.Script {
             if (this.health > 1) {
                 this.health--;
                 this._text.changeText(this.health + "");
-                // console.log("owner x : {}, other x: {}", owner.x, other.owner.x);
-                this._rig.applyLinearImpulseToCenter({x: owner.x > other.owner.x ? 5 : -5, y: -50})
+                this._rig.applyLinearImpulseToCenter({x: owner.x > other.owner.x ? MotionConfig.dropboxHitScaleX : -MotionConfig.dropboxHitScaleX, y: -MotionConfig.dropboxHitScaleY})
                 Laya.SoundManager.playSound("sound/hit.wav");
             } else {
                 if (owner.parent) {
@@ -49,8 +49,8 @@ export default class DropBox extends Laya.Script {
                     var newX = owner.x;
                     var newY = owner.y;
                     if (this.level > 1) {
-                        this.createSplitBox(newX, newY, -1, -4);
-                        this.createSplitBox(newX, newY, 1, -4);
+                        this.createSplitBox(newX, newY, -MotionConfig.dropboxSplitScaleX, -MotionConfig.dropboxSplitScaleY);
+                        this.createSplitBox(newX, newY, MotionConfig.dropboxSplitScaleX, -MotionConfig.dropboxSplitScaleY);
                     }
                     owner.removeSelf();
                     Laya.SoundManager.playSound("sound/destroy.wav");

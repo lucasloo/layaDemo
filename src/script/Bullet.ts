@@ -1,4 +1,5 @@
-/**
+import MotionConfig from "../res/MotionConfig"
+ /**
  * 子弹脚本，实现子弹飞行逻辑及对象池回收机制
  */
 export default class Bullet extends Laya.Script {
@@ -7,7 +8,7 @@ export default class Bullet extends Laya.Script {
     onEnable(): void {
         //设置初始速度
         var rig: Laya.RigidBody = this.owner.getComponent(Laya.RigidBody);
-        rig.setVelocity({ x: 0, y: -10 });
+        rig.setVelocity({ x: 0, y: -MotionConfig.bulletSpeed });
     }
 
     onTriggerEnter(other: any, self: any, contact: any): void {

@@ -90,11 +90,22 @@
         }
     }
 
+    class MotionConfig {
+        constructor() { }
+    }
+    MotionConfig.bulletMass = 1;
+    MotionConfig.bulletSpeed = 10;
+    MotionConfig.bulletInterval = 100;
+    MotionConfig.dropboxHitScaleX = 5;
+    MotionConfig.dropboxHitScaleY = 50;
+    MotionConfig.dropboxSplitScaleX = 1;
+    MotionConfig.dropboxSplitScaleY = 4;
+
     class Bullet extends Laya.Script {
         constructor() { super(); }
         onEnable() {
             var rig = this.owner.getComponent(Laya.RigidBody);
-            rig.setVelocity({ x: 0, y: -10 });
+            rig.setVelocity({ x: 0, y: -MotionConfig.bulletSpeed });
         }
         onTriggerEnter(other, self, contact) {
             if (other.label === "dropbox") {
@@ -133,7 +144,7 @@
                 if (this.health > 1) {
                     this.health--;
                     this._text.changeText(this.health + "");
-                    this._rig.applyLinearImpulseToCenter({ x: owner.x > other.owner.x ? 5 : -5, y: -50 });
+                    this._rig.applyLinearImpulseToCenter({ x: owner.x > other.owner.x ? MotionConfig.dropboxHitScaleX : -MotionConfig.dropboxHitScaleX, y: -MotionConfig.dropboxHitScaleY });
                     Laya.SoundManager.playSound("sound/hit.wav");
                 }
                 else {
@@ -145,8 +156,8 @@
                         var newX = owner.x;
                         var newY = owner.y;
                         if (this.level > 1) {
-                            this.createSplitBox(newX, newY, -1, -4);
-                            this.createSplitBox(newX, newY, 1, -4);
+                            this.createSplitBox(newX, newY, -MotionConfig.dropboxSplitScaleX, -MotionConfig.dropboxSplitScaleY);
+                            this.createSplitBox(newX, newY, MotionConfig.dropboxSplitScaleX, -MotionConfig.dropboxSplitScaleY);
                         }
                         owner.removeSelf();
                         Laya.SoundManager.playSound("sound/destroy.wav");
@@ -182,7 +193,6 @@
     class Plane extends Laya.Script {
         constructor() {
             super();
-            this.shootInterval = 100;
             this.lastShootingTime = 0;
             this._dragging = false;
         }
@@ -198,7 +208,7 @@
         }
         onUpdate() {
             let now = Date.now();
-            if (now - this.lastShootingTime > this.shootInterval && this._dragging) {
+            if (now - this.lastShootingTime > MotionConfig.bulletInterval && this._dragging) {
                 this.lastShootingTime = now;
                 let flyer = Laya.Pool.getItemByCreateFun("bullet", this.bullet.create, this.bullet);
                 flyer.pos(this.owner.x, this.owner.y);

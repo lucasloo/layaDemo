@@ -1,10 +1,12 @@
 {
+    "x":0,
     "type":"View",
     "selectedBox":1,
-    "selecteID":36,
+    "searchKey":"View",
     "referenceLines":null,
     "props":{"sceneWidth":600,"sceneHeight":400,"sceneColor":"#000000"},
     "nodeParent":-1,
+    "maxID":45,
     "label":"View",
     "isOpen":true,
     "isDirectory":true,
@@ -13,7 +15,9 @@
     "compId":1,
     "child":[
         {
+            "x":15,
             "type":"GraphicNode",
+            "searchKey":"GraphicNode",
             "props":{"y":0,"x":0,"width":20,"skin":"test/b1.png","pivotY":10,"pivotX":10,"height":20},
             "nodeParent":1,
             "label":"GraphicNode",
@@ -25,7 +29,9 @@
                 ]
         },
         {
+            "x":15,
             "type":"GraphicNode",
+            "searchKey":"GraphicNode",
             "props":{"y":20,"x":20,"width":20,"skin":"test/b1.png","pivotY":10,"pivotX":10,"height":20},
             "nodeParent":1,
             "label":"GraphicNode",
@@ -37,7 +43,9 @@
                 ]
         },
         {
+            "x":15,
             "type":"GraphicNode",
+            "searchKey":"GraphicNode",
             "props":{"y":20,"x":0,"width":20,"skin":"test/b1.png","pivotY":10,"pivotX":10,"height":20},
             "nodeParent":1,
             "label":"GraphicNode",
@@ -49,7 +57,9 @@
                 ]
         },
         {
+            "x":15,
             "type":"GraphicNode",
+            "searchKey":"GraphicNode",
             "props":{"y":20,"x":-20,"width":20,"skin":"test/b1.png","pivotY":10,"pivotX":10,"height":20},
             "nodeParent":1,
             "label":"GraphicNode",
@@ -61,7 +71,9 @@
                 ]
         },
         {
+            "x":15,
             "type":"GraphicNode",
+            "searchKey":"GraphicNode",
             "props":{"y":0,"x":20,"width":20,"skin":"test/b1.png","pivotY":10,"pivotX":10,"height":20},
             "nodeParent":1,
             "label":"GraphicNode",
@@ -73,7 +85,9 @@
                 ]
         },
         {
+            "x":15,
             "type":"GraphicNode",
+            "searchKey":"GraphicNode",
             "props":{"y":0,"x":-20,"width":20,"skin":"test/b1.png","pivotY":10,"pivotX":10,"height":20},
             "nodeParent":1,
             "label":"GraphicNode",
@@ -85,7 +99,9 @@
                 ]
         },
         {
+            "x":15,
             "type":"GraphicNode",
+            "searchKey":"GraphicNode",
             "props":{"y":-20,"x":20,"width":20,"skin":"test/b1.png","pivotY":10,"pivotX":10,"height":20},
             "nodeParent":1,
             "label":"GraphicNode",
@@ -97,7 +113,9 @@
                 ]
         },
         {
+            "x":15,
             "type":"GraphicNode",
+            "searchKey":"GraphicNode",
             "props":{"y":-20,"x":0,"width":20,"skin":"test/b1.png","pivotY":10,"pivotX":10,"height":20},
             "nodeParent":1,
             "label":"GraphicNode",
@@ -109,7 +127,9 @@
                 ]
         },
         {
+            "x":15,
             "type":"GraphicNode",
+            "searchKey":"GraphicNode",
             "props":{"y":-20,"x":-20,"width":20,"skin":"test/b1.png","pivotY":10,"pivotX":10,"height":20},
             "nodeParent":1,
             "label":"GraphicNode",
@@ -159,6 +179,15 @@
                                 "target":36,
                                 "key":"x",
                                 "index":5
+                            }],
+                        "skin":[
+                            {
+                                "value":"test/t1.png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":36,
+                                "key":"skin",
+                                "index":0
                             }],
                         "alpha":[
                             {
@@ -215,6 +244,15 @@
                                 "target":37,
                                 "key":"x",
                                 "index":5
+                            }],
+                        "skin":[
+                            {
+                                "value":"test/t1.png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":37,
+                                "key":"skin",
+                                "index":0
                             }],
                         "alpha":[
                             {
@@ -328,6 +366,15 @@
                                 "key":"x",
                                 "index":5
                             }],
+                        "skin":[
+                            {
+                                "value":"test/c1.png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":39,
+                                "key":"skin",
+                                "index":0
+                            }],
                         "alpha":[
                             {
                                 "value":1,
@@ -383,6 +430,15 @@
                                 "target":40,
                                 "key":"x",
                                 "index":5
+                            }],
+                        "skin":[
+                            {
+                                "value":"test/p1.png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":40,
+                                "key":"skin",
+                                "index":0
                             }],
                         "alpha":[
                             {
@@ -496,6 +552,15 @@
                                 "key":"x",
                                 "index":5
                             }],
+                        "skin":[
+                            {
+                                "value":"test/c1.png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":42,
+                                "key":"skin",
+                                "index":0
+                            }],
                         "alpha":[
                             {
                                 "value":1,
@@ -590,6 +655,15 @@
                                 "target":44,
                                 "key":"x",
                                 "index":5
+                            }],
+                        "skin":[
+                            {
+                                "value":"test/block.png",
+                                "tweenMethod":"linearNone",
+                                "tween":false,
+                                "target":44,
+                                "key":"skin",
+                                "index":0
                             }],
                         "alpha":[
                             {
